@@ -36,8 +36,8 @@ Following the description of this project, the layout is split into 2 separate l
 
 As of the development of this prototype all the code assumes the server is running on the same machine as the client (all addresses called are for http://localhost ). This means that if you attempt to run this on an external machine (like a phone) without modifying the fetch calls within the different pages the application will crash. Our current method of testing and demonstrating the code is as follows:
 1. ```cd WorkSafetyServer``` to get into the server-side directory.
-2. Start the server in development mode (sets the server listening on port 3000) using the command ```npm dev```
-3. Test server functionality using the command ```npm test``` or ```npm testLinux``` if using / for directory traversal
+2. Start the server in development mode (sets the server listening on port 3000) using the command ```npm run dev```
+3. Test server functionality using the command ```npm run testAll``` or ```npm run testAllLinux``` if using / for directory traversal
 4. ```cd ..\WorkSafetyApp``` to get into the client-side directory.
 5. Start the client side in development mode using the command ```expo start --web``` :warning: This will automatically open your browser to the client-side interface
 6. At this point it is recommended to open up the web development tools on your browser and toggle the mobile view
@@ -48,6 +48,6 @@ In order to run this on a mobile device it is recommended that a new branch is c
 ## Instructions for Production Environment
 While at the moment we do not have ways to properly test the production environment capabilities of this application, the changes should not be too large (excluding the swap from the web-scraping approach for open source SDS to an API call for proprietary SDS).
 1. Alter the port the server-side application is running on to whichever you need. This can be done through the [.env file](./WorkSafetyServer/.env)
-2. Theres no production configuration setup for the server side so you could then just run it using ```npm dev``` from inside the server-side directory.
+2. Theres no production configuration setup for the server side so you could then just run it using ```npm run dev``` from inside the server-side directory.
 3. Alter the fetch calls within the client-side application to reflect the new public ip the server-side application is running on.
 4. Build the mobile application using ```expo build:android -t apk``` for android or ```expo build:ios``` for apple devices. Further information on this subject can be found in the [Expo Documentation](https://docs.expo.dev/distribution/building-standalone-apps/)
