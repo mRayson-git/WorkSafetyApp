@@ -1,0 +1,37 @@
+{
+  "name": "team-project-300-team-7",
+  "version": "0.0.1",
+  "description": "Simple react native application that serves as a means of providing SDS sheets to those who need them in an effective and efficient way",
+  "main": "server.js",
+  "scripts": {
+    "dev": "node --trace-warnings server",
+    "testAll": "jasmine  spec\\*Spec.js --random=false",
+    "testSDS": "jasmine spec\\sdsSpec.js --random=false",
+    "testUser": "jasmine spec\\userSpec.js --random=false",
+    "testWorksite": "jasmine spec\\worksiteSpec.js --random=false",
+    "testAllLinux": "jasmine  spec/*Spec.js --random=false"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CST8334/team-project-300-team-7.git"
+  },
+  "author": "The Titans",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/CST8334/team-project-300-team-7/issues"
+  },
+  "homepage": "https://github.com/CST8334/team-project-300-team-7#readme",
+  "dependencies": {
+    "@google-cloud/storage": "^5.8.5",
+    "@material-ui/core": "^4.12.2",
+    "bent": "^7.3.12",
+    "cors": "^2.8.5",
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "firebase": "^8.7.1",
+    "puppeteer": "^10.1.0"
+  },
+  "devDependencies": {
+    "jasmine": "^3.8.0"
+  }
+}
